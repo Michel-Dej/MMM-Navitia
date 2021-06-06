@@ -77,3 +77,11 @@
   font-size: .9em;
   font-weight: bold;
 }
+
+.schedules tr td {
+  padding:0;
+}
+
+.schedules {
+  margin-bottom:12px;
+}

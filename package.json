@@ -1,0 +1,32 @@
+{
+  "name": "mmm-navitia",
+  "version": "1.0.0",
+  "description": "MagicMirror² module displaying French public transport timetables and traffic issues",
+  "main": "MMM-Navitia.js",
+  "scripts": {
+    "test": "see MagicMirror² documentation https://docs.magicmirror.builders/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michel-Dej/MMM-Navitia.git"
+  },
+  "keywords": [
+    "ratp",
+    "transilien",
+    "magicmirror",
+    "navitia",
+    "trafic",
+    "train",
+    "métro",
+    "rer"
+  ],
+  "author": "Michel Dejoux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Michel-Dej/MMM-Navitia/issues"
+  },
+  "homepage": "https://github.com/Michel-Dej/MMM-Navitia#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
