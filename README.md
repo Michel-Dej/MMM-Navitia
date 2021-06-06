@@ -19,24 +19,24 @@ npm install
 ## Usage
 
 ```
-		{
-			module:'MMM-Navitia',
-			position:'top_right',
-			config: 
-			{
-				navitiaApiKey:"YOUR_NAVITIA_API_KEY", // go to https://www.navitia.io/
-				departures:
-				[
-					{
-						// Ligne A
-						departureStopPoint:"TRN:SP:DUA8738640", // Stop ID in the file
-						departureLine:"TRN:DUA810801041",       // Line ID in the file
-						direction:"forward",                    // Direction of the journey : [all, backward, forward]
-						limit:5                                 // Number of next departures 
-					},
-				]
-			}
-		}
+{
+    module:'MMM-Navitia',
+    position:'top_right',
+    config: 
+    {
+        navitiaApiKey:"YOUR_NAVITIA_API_KEY", // go to https://www.navitia.io/
+        departures:
+        [
+            {
+                // Ligne A
+                departureStopPoint:"TRN:SP:DUA8738640", // Stop ID in the file
+                departureLine:"TRN:DUA810801041",       // Line ID in the file
+                direction:"forward",                    // Direction of the journey : [all, backward, forward]
+                limit:5                                 // Number of next departures 
+            },
+        ]
+    }
+}
 ```
 
 
