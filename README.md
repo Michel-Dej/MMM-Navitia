@@ -11,7 +11,7 @@ It is based on Navitia open API (https://www.navitia.io/)
 ## Installation
 
 ```bash
-git clone
+git clone https://github.com/Michel-Dej/MMM-Navitia
 cd MMM-Navitia
 npm install
 ```
