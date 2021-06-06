@@ -4,6 +4,7 @@ MMM-NAVITIA is a MagicMirror² module that displays next trains arriving in a sp
 It is based on Navitia open API (https://www.navitia.io/)
 
 ## Features
+* Displays the next departures from the stop point specified
 
 ## Visuals
 
@@ -18,21 +19,29 @@ npm install
 ## Usage
 
 ```
-{
-    module: 'MMM-Navitia',
-    position: 'bottom_left',
-    config: {
-        }
-    }
-}
+		{
+			module:'MMM-Navitia',
+			position:'top_right',
+			config: 
+			{
+				navitiaApiKey:"YOUR_NAVITIA_API_KEY", // go to https://www.navitia.io/
+				departures:
+				[
+					{
+						// Ligne A
+						departureStopPoint:"TRN:SP:DUA8738640", // Stop ID in the file
+						departureLine:"TRN:DUA810801041",       // Line ID in the file
+						direction:"forward",                    // Direction of the journey : [all, backward, forward]
+						limit:5                                 // Number of next departures 
+					},
+				]
+			}
+		}
 ```
 
-## Configuration options
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 Copyright (c) [2021] [Michel Dejoux]
