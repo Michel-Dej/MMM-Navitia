@@ -21,8 +21,6 @@ module.exports = NodeHelper.create({
         Log.info(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
     },
 
-    //this.sendSocketNotification('SET_CONFIG', this.config);
-
 
     getDepartures: async function(schedules) {
 
@@ -87,76 +85,6 @@ module.exports = NodeHelper.create({
 
         }
     },
-
-
-
-    // getDepartures: function(config) {
-
-    //     // config.departures.forEach((departure) => {
-    //     for (var index=0; index<config.departures.length; index++)
-    //     {
-    //         // var departure = config.departures[index];
-    //         // var nextDepartures = [];
-
-    //         // TODO Try Catch on config settings
-
-    //         var url = config.navitiaURL 
-    //             + "/stop_points/stop_point:"
-    //             + config.departures[index].departureStopPoint
-    //             + "/lines/line:"
-    //             + config.departures[index].departureLine
-    //             + "/departures?direction_type="
-    //             + config.departures[index].direction
-    //             + "&key="
-    //             + config.navitiaApiKey;
-
-    //         (async() => {
-    //             try {
-    //                 var navitiaResponse     = await got(url);
-    //                 var navitiaJson         = JSON.parse(navitiaResponse.body);
-    //                 var stopPoint           = '';
-    //                 var nextTrains  = [];
-                    
-    //                 // Maximum results depending on the limit
-    //                 for (var i = 0; i < navitiaJson.departures.length && nextTrains.length < config.limit; i++) {
-
-    //                     // Trains only
-    //                     if (navitiaJson.departures[i].display_informations.physical_mode == "Train")
-    //                     {
-    //                         var nextDeparture = 
-    //                         {
-    //                             "headSign"      :navitiaJson.departures[i].display_informations.headsign,
-    //                             "lineCode"      :navitiaJson.departures[i].display_informations.code,
-    //                             "lineColor"     :navitiaJson.departures[i].display_informations.color,
-    //                             "departureTime" :navitiaJson.departures[i].stop_date_time.base_departure_date_time,
-    //                             "direction"     :navitiaJson.departures[i].route.direction.name
-    //                         }
-    //                         if (stopPoint == '')    stopPoint = navitiaJson.departures[i].stop_point.name;
-            
-    //                         nextTrains.push(nextDeparture);
-    //                     }
-    //                 }
-
-    //                 nextDepartures.push({"departureStopPoint":stopPoint,"nextTrains":nextTrains})
-
-    //                 console.log("success");
-
-    //                 // config.nextDepartures[indexConfig].departureStopPoint = stopPoint;
-    //                 // config.nextDepartures[indexConfig].nextTrains = nextTrains;
-
-    //                 // TODO
-    //                 // comment spécifier le bon departure au client
-    //                 this.sendSocketNotification('MMM-Navitia-Departures', nextDepartures);
-
-    //             }
-    //             catch(error) {
-    //                 console.log(error.message);
-    //             }
-    //         })();
-
-    //     };
-    // },
-
 
 });
 
